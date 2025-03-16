@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ScrapeX - Smart Web Scraping</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+            scroll-behavior: smooth;
+        }
+        header {
+            background: #333;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+            position: relative;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        .contact-menu {
+            display: none;
+            position: absolute;
+            background: white;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            border-radius: 5px;
+            padding: 10px;
+            top: 25px;
+            left: -10px;
+            z-index: 100;
+        }
+        .contact-menu a {
+            display: block;
+            padding: 5px;
+            text-decoration: none;
+            color: #333;
+        }
+        .contact-menu a:hover {
+            background: #f4f4f4;
+        }
+        .hero {
+            text-align: center;
+            padding: 50px;
+            background: #007bff;
+            color: white;
+        }
+        .cta-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background: white;
+            color: #007bff;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+        .feature-grid {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            padding: 40px;
+        }
+        .feature {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            text-align: center;
+            width: 30%;
+        }
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>ScrapeX</h1>
+        <nav>
+            <ul>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="signup.html">Sign Up</a></li>
+                <li><a href="signin.html">Sign In</a></li>
+                <li>
+                    <a id="contact-link">Contact</a>
+                    <div class="contact-menu" id="contact-menu">
+                        <a href="email.html">Email Us</a>
+                        <a href="call.html">Call Us</a>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section class="hero">
+        <h1>Powerful & Smart Web Scraping</h1>
+        <p>ScrapeX helps you extract data efficiently and seamlessly.</p>
+        <a href="getstarted.html" target="_blank" class="cta-button">Get Started</a>
+    </section>
+    
+    <section id="features">
+        <h2 style="text-align: center;">Why ScrapeX?</h2>
+        <div class="feature-grid">
+            <div class="feature">
+                <h3>Fast & Reliable</h3>
+                <p>Scrape data quickly with optimized performance.</p>
+            </div>
+            <div class="feature">
+                <h3>Customizable</h3>
+                <p>Adapt ScrapeX to your unique scraping needs.</p>
+            </div>
+            <div class="feature">
+                <h3>Easy to Use</h3>
+                <p>User-friendly interface for effortless scraping.</p>
+            </div>
+        </div>
+    </section>
+    
+    <section id="about" style="text-align: center; padding: 40px;">
+        <h2>About ScrapeX</h2>
+        <p>ScrapeX is a modern web scraping tool designed to make data extraction simple, fast, and efficient.</p>
+    </section>
+    
+    <footer>
+        <p>&copy; 2025 ScrapeX. All rights reserved.</p>
+    </footer>
+
+    <script>
+        document.getElementById("contact-link").addEventListener("click", function() {
+            var menu = document.getElementById("contact-menu");
+            menu.style.display = menu.style.display === "block" ? "none" : "block";
+        });
+
+        // Close contact menu when clicking outside
+        document.addEventListener("click", function(event) {
+            var menu = document.getElementById("contact-menu");
+            var contactLink = document.getElementById("contact-link");
+            if (event.target !== menu && event.target !== contactLink) {
+                menu.style.display = "none";
+            }
+        });
+    </script>
+
+</body>
+</html>
